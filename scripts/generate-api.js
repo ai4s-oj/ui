@@ -4,7 +4,7 @@ const fs = require("fs-extra");
 
 const apiUrl =
   process.argv.filter(arg => arg.toLowerCase().startsWith("http://") || arg.toLowerCase().startsWith("https://"))[0] ||
-  "http://lyrio.test/docs-json";
+  "http://162.105.151.213/docs-json";
 
 if (!apiUrl) {
   console.error("Usage: node scripts/generate-api.js <url>");
