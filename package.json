@@ -171,6 +171,7 @@
   ],
   "jsdelivr": "dist/index.html",
   "dependencies": {
+    "@babel/helper-string-parser": "^7.25.9",
     "git-commit-info": "^2.0.1"
   }
 }
