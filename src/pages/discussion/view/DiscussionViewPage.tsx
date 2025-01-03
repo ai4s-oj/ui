@@ -445,7 +445,8 @@ interface DiscussionEditorProps {
   placeholder?: string;
 }
 
-export let DiscussionEditor = observer<DiscussionEditorProps, HTMLDivElement>(
+export let DiscussionEditor = observer(
+  React.forwardRef<HTMLDivElement, DiscussionEditorProps>(
   (props, ref) => {
     const _ = useLocalizer("discussion.edit");
 
@@ -606,8 +607,7 @@ export let DiscussionEditor = observer<DiscussionEditorProps, HTMLDivElement>(
         </div>
       </div>
     );
-  },
-  { forwardRef: true }
+  })
 );
 
 interface ReplyOrLoadMore {
