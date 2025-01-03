@@ -1,4 +1,4 @@
-import { observable, computed, makeObservable } from "mobx";
+import { observable, computed, makeObservable, action } from "mobx";
 import { computedFn } from "mobx-utils";
 import { create, persist } from "mobx-persist";
 
@@ -37,6 +37,7 @@ export class AppState {
   @observable
   activeNavButton: NavButtonName;
 
+  @action
   enterNewPage(title: string, activeNavButton: NavButtonName = null, responsiveLayout: boolean = true) {
     this.title = title;
     this.responsiveLayout = responsiveLayout;
